@@ -143,17 +143,6 @@ production.to_csv("Downloads/production.csv")
 leases.to_csv("Downloads/leases.csv")
 companies.to_csv("Downloads/companies.csv")
 
-
-#yeah the calendar is wrong, it doesn't matter
-calendar_list = []
-
-for i in range(201901, 202013):
-    calendar_list.append([i, 30])
-
-calendar = pd.DataFrame(calendar_list, columns=["date", "days"])
-
-calendar.to_csv("calendar.csv")
-
 json.dump(last_modified, open("last_modified.json", "wt"))
 
 
